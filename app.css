@@ -1,6 +1,6 @@
 .bg-img {
   background-image: url("img/background.jpg");
-  max-height: 885px;
+  max-height: 500%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,7 +9,7 @@
   text-align: center;
 }
 
-.login {
+.main {
   text-align: center;
   margin: 5% 0% 12% 38%;
   padding: 50px 100px 110px 80px;
@@ -21,13 +21,9 @@
   font-size: larger;
   font-family: Comic Sans MS, Comic Sans, cursive;
 }
+
 .tittle {
   color: rgb(70, 64, 64);
-}
-
-button {
-  font-size: larger;
-  background-color: rgba(2, 33, 65, 0.1);
 }
 
 ::placeholder {
@@ -36,4 +32,26 @@ button {
 
 input[type="text"] {
   border: solid blue 2px;
+}
+
+.heading {
+  font-size: 400%;
+  color: rgb(70, 64, 64);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.email {
+  height: 30px;
+  width: 210px;
+}
+.password {
+  height: 30px;
+  width: 210px;
+}
+button {
+  font-size: larger;
+  background-color: rgba(2, 33, 65, 0.1);
+}
+footer {
+  font-size: larger;
 }
