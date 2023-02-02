@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="app.css" />
-
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootstrap Practice</title>
+    <link rel="stylesheet" href="app.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,50 +19,159 @@
     ></script>
   </head>
   <body>
-    <div class="b">
+  
+    <form class="container mt-5 shadow-lg">
       <div class="row">
-        <div class="col bg-white text-primary">
-          <h2 class="ms-5 pt-2">General Information</h2>
+        <!-- General Information -->
+        <div class="col bg-white text-primary fst-italic">
+          <h2 class="ms-5 pt-5">General Information</h2>
           <br /><br />
-          <div class="ms-4">
-            <input
-              class="col-xxl-11 ms-4"
-              type="text"
-              placeholder="Title"
-            /><br /><br />
-            <div class="row justify-content-md-around">
-              <input class="col-lg-5" type="text " placeholder="First Name" />
-              <input class="col-lg-5" type="text " placeholder="Last Name" />
-            </div>
-            <br />
-            <input
-              class="col-xxl-11 ms-4"
-              type=" text"
-              placeholder="Position"
-            />
+          <div class="ms-sm-5 me-5">
+            <!-- tittle -->
+          <select required class="form-select">
+            <option value="" disabled selected hidden>Tittle</option>
+            <option value="0">Intern</option>
+              <option value="1">Software Enggineering</option>
+              <option value="2">Project Manager</option>
+              <option value="3">Technical Lead</option>
+            </select>
+        </select>
             <br /><br />
-            <input
-              class="col-xxl-11 ms-4"
-              type=" text"
-              placeholder="Position"
-            />
-            <br /><br />
-            <div class="row justify-content-md-around">
+            <!-- first name and last name -->
+            <div class="row  justify-content-md-around ">
               <input
-                class="col-lg-5"
+                class="col ms-2 form-control input-lg"
                 type="text "
-                placeholder="Business Arena"
+                placeholder="First Name"
+                required
               />
-              <input class="col-lg-5" type="text " placeholder="Employees" />
+              <input
+                class="col ms-2 form-control input-lg"
+                type="text "
+                placeholder="Last Name"
+                required
+              />
             </div>
+            <br /><br />
+            <!-- Position -->
+            <select required class="form-select">
+              <option value="" disabled selected hidden>Position</option>
+                <option value="0">Full Stack Developer</option>
+                <option value="1">Frontend Developer</option>
+                <option value="2">Backend Developer</option>
+                
+              </select>
+            <br /><br />
+            <!-- position -->
+            <input
+              class="form-control input-lg"
+              type=" text"
+              placeholder="Position"
+            />
+            <br /><br />
+            <!-- business area -->
+            <div class="row justify-content-md-around ms-0">
+              <input
+                class="col  form-control input-lg"
+                type="text "
+                placeholder="Business Area"
+                required
+              />
+              <!-- employees -->
+              <select required class="form-select col ms-2">
+                <option value="" disabled selected hidden>Employees</option>
+                  <option value="0">Junior</option>
+                  <option value="1">Senior</option>
+                </select>
+            </div>
+            <div class="row justify-content-md-around ms-0"></div>
           </div>
         </div>
 
         <!-- contact details -->
-        <div class="col bg-primary text-light">
-          <h2 class="ms-5 pt-2">Contact Details</h2>
+        <div class="col bg-primary pb-lg-5 ">
+          <h2 class="ms-5 pt-5 fst-italic text-white">Contact Details</h2>
+          <br /><br />
+          <div class="ms-5 me-5">
+            <!-- street + nr -->
+            <input
+              class="bg-primary border border-white form-control input-lg"
+              type="text"
+              placeholder="Street + Nr" 
+              required
+            /><br /><br />
+            <!-- additional information -->
+            <input
+              class="bg-primary border border-white form-control input-lg"
+              type="text"
+              placeholder="Additional Information"
+            /><br /><br />
+<!-- zip code -->
+            <div class="row  justify-content-md-around ms-0">
+              <input
+                class="col  form-control input-lg bg-primary border"
+                type="number"
+                placeholder="Zip Code"
+                required
+              />
+              <!-- place -->
+              <input
+                class="col ms-2 form-control input-lg bg-primary border"
+                type="text "
+                placeholder="Place"
+                required
+              />
+            </div>
+<!-- country -->
+            <br /><br />
+            <input
+              class="bg-primary border border-white form-control input-lg"
+              type="text"
+              placeholder="Country"
+              required
+              /><br /><br />
+              <!-- code and phone number -->
+            <div class="row  justify-content-md-around ms-0">
+              <input
+                class="col form-control input-lg bg-primary border"
+                type="number "
+                placeholder="Code+"
+                required
+              />
+              <input
+                class="col ms-2 form-control input-lg bg-primary border"
+                type="number "
+                placeholder="Phone Number"
+                required
+              />
+            </div>
+            <br /><br />
+            <!-- email -->
+            <input
+              class="bg-primary border border-white form-control input-lg"
+              type="email"
+              placeholder="Your Email"
+              required
+              /><br /><br />
+              <!-- checkbox -->
+            <div class="form-check text-white">
+              <input
+                type="checkbox"
+                class="form-check-input form-control input-lg "
+                id="checkbox" required
+              />
+              <label for="checkbox" class="form-check-label"></label>
+                I do accept the <span class="text-decoration-underline">Terms and Conditions</span> of your site.</label
+              >
+              <br /><br /><br>
+            </div>
+            
+         </div>
+         <!-- button -->
+         <button class="btn btn-light btn-lg ms-5  ">Register</button>
         </div>
       </div>
-    </div>
+    </form>
+  
   </body>
 </html>
