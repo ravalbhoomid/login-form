@@ -1,3 +1,47 @@
-#main {
-  background-color: blueviolet;
+/* form {
+  border-style: solid;
+  border-color: rgb(151, 201, 241);
+  border-width: 40px;
+  border-radius: 2%;
+  background-color: rgb(151, 201, 241);
+} */
+html,
+body {
+  height: 100vh;
+  background-color: aqua !important;
+}
+.main-container {
+  border-radius: 2%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.form-wrapper {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#street::placeholder {
+  color: white;
+}
+#additional::placeholder {
+  color: white;
+}
+#zip::placeholder {
+  color: white;
+}
+#place::placeholder {
+  color: white;
+}
+#country::placeholder {
+  color: white;
+}
+#code::placeholder {
+  color: white;
+}
+#phone::placeholder {
+  color: white;
+}
+#email::placeholder {
+  color: white;
 }
