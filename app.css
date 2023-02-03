@@ -45,3 +45,15 @@ body {
 #email::placeholder {
   color: white;
 }
+
+@media screen and (max-width: 768px) {
+  .generalinfo {
+    padding-bottom: 30px;
+  }
+  .main-container {
+    height: auto;
+  }
+  .button {
+    margin-bottom: 30px;
+  }
+}
