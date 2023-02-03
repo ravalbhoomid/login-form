@@ -11,10 +11,8 @@
 
 .main {
   text-align: center;
-  margin: 5% 15% 12% 20%;
-  padding: 50px 10% 110px 10%;
-  background: rgba(21, 25, 29, 0.1);
-
+  padding-bottom: 300px;
+  margin-top: 10%;
   font-size: larger;
   font-family: Comic Sans MS, Comic Sans, cursive;
 }
@@ -38,12 +36,12 @@ input[type="text"] {
 }
 
 .email {
-  height: 30px;
-  width: 200px;
+  height: 35px;
+  width: 300px;
 }
 .password {
-  height: 30px;
-  width: 200px;
+  height: 35px;
+  width: 300px;
 }
 button {
   font-size: larger;
@@ -52,89 +50,33 @@ button {
 footer {
   font-size: larger;
 }
-
-@media screen and (max-width: 550px) {
-  .heading {
-    font-size: 35px;
-  }
-  body {
-    text-align: center;
-  }
-
-  .main {
-    text-align: center;
-    width: 400px;
-    background: none;
-    margin-left: -10px;
-  }
-  .email {
-    height: 15px;
-    width: 60px;
-  }
-  .password {
-    height: 15px;
-    width: 60px;
-  }
-  .tittle {
-    font-size: 25px;
-  }
-  .button {
-    font-size: large;
-  }
-}
-@media screen and (max-width: 450px) {
-  .heading {
-    font-size: 35px;
-  }
-  body {
-    text-align: center;
-  }
-
-  .main {
-    text-align: center;
-    width: 300px;
-    background: none;
-    margin-left: -10px;
-  }
-  .email {
-    height: 15px;
-    width: 60px;
-  }
-  .password {
-    height: 15px;
-    width: 60px;
-  }
-  .tittle {
-    font-size: 25px;
-  }
-  .button {
-    font-size: medium;
-  }
+title {
+  font-size: larger;
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 600px) {
   .heading {
-    font-size: 30px;
+    font-size: 50px;
   }
   body {
     text-align: center;
   }
 
   .main {
-    text-align: center;
-    width: 350px;
+    /* width: 80px; */
     background: none;
-    margin-left: -50px;
+    margin-top: 25%;
+    /* margin-left: 150px; */
   }
   .email {
-    height: 15px;
-    width: 60px;
+    height: 20px;
+    width: 120px;
   }
   .password {
-    height: 15px;
-    width: 60px;
+    height: 20px;
+    width: 120px;
   }
   .tittle {
-    font-size: 20px;
+    font-size: 28px;
   }
 }
