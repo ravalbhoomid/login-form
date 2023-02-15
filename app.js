@@ -53,14 +53,15 @@ function onEdit(td) {
   document.querySelector("#description").value = row.cells[3].innerHTML;
 }
 
-function onDelete(td) {
-  row = td.parentElement.parentElement;
-  document.querySelector("#recipeList").deleteRow(row.rowIndex);
-}
-
 function update(formData) {
   row.cells[0].innerHTML = formData.id;
   row.cells[1].innerHTML = formData.name;
   row.cells[2].innerHTML = formData.type;
   row.cells[3].innerHTML = formData.description;
+}
+
+function onDelete(td) {
+  console.log(td);
+  row = td.parentElement.parentElement;
+  document.querySelector("#recipeList").deleteRow(row.rowIndex);
 }
