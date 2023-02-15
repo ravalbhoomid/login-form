@@ -1,59 +1,62 @@
-/* form {
-  border-style: solid;
-  border-color: rgb(151, 201, 241);
-  border-width: 40px;
-  border-radius: 2%;
-  background-color: rgb(151, 201, 241);
-} */
-html,
 body {
-  height: 100vh;
-  background-color: aqua !important;
+  background-image: url(recipe.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: 2px;
+  height: auto;
 }
-.main-container {
-  border-radius: 2%;
-  height: 100%;
+
+body h1 {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 30px;
+}
+
+form {
+  background-color: rgb(93, 159, 0);
+  height: 450px;
+  width: 350px;
+  margin-top: 20%;
+  padding: 30px;
+  display: grid;
+}
+
+table {
   display: flex;
-  align-items: center;
-}
-.form-wrapper {
-  overflow: hidden;
-  border-radius: 10px;
+  justify-content: center;
 }
 
-#street::placeholder {
-  color: white;
-}
-#additional::placeholder {
-  color: white;
-}
-#zip::placeholder {
-  color: white;
-}
-#place::placeholder {
-  color: white;
-}
-#country::placeholder {
-  color: white;
-}
-#code::placeholder {
-  color: white;
-}
-#phone::placeholder {
-  color: white;
-}
-#email::placeholder {
-  color: white;
+table.list {
+  border-collapse: collapse;
+
+  padding: 11px;
 }
 
-@media screen and (max-width: 768px) {
-  .generalinfo {
-    padding-bottom: 30px;
-  }
-  .main-container {
-    height: auto;
-  }
-  .button {
-    margin-bottom: 30px;
-  }
+table.list th {
+  width: 250px;
+}
+
+.list td {
+  width: 250px;
+  text-align: center;
+  padding: 11px;
+  background: whitesmoke;
+}
+th {
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  width: 250px;
+}
+::placeholder {
+  padding-left: 7px;
+}
+
+tr.heading {
+  text-align: center;
+}
+
+div #submit {
+  background-color: yellow;
 }
