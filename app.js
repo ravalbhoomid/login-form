@@ -1,67 +1,80 @@
-row = null;
-
+seletedRow = null;
+let m = 1;
 function onFormSubmit() {
-  var formData = readFormData();
-  if (row == null) {
-    InsertNewRecord(formData);
-  } else {
-    update(formData);
+  event.preventDefault();
+  let formData = readFormData();
+
+  if (
+    formData.name.trim().length >= 1 &&
+    formData.type.trim().length >= 1 &&
+    formData.description.trim().length >= 1
+  ) {
+    if (seletedRow === null) {
+      insertNewRecord(formData);
+    } else {
+      updateRecord(formData);
+    }
   }
-  //   InsertNewRecord(formData);
+
   resetForm();
 }
 
 function readFormData() {
-  var formData = {};
-  formData["id"] = document.querySelector("#id").value;
-  formData["name"] = document.querySelector("#name").value;
-  formData["type"] = document.querySelector("#type").value;
-  formData["description"] = document.querySelector("#description").value;
+  let formData = {};
+  //   formData["recipeNo"] = document.getElementById("recipeNo").value;
+  formData["name"] = document.getElementById("name").value;
+  formData["type"] = document.getElementById("type").value;
+  formData["description"] = document.getElementById("description").value;
   return formData;
 }
 
-function InsertNewRecord(data) {
+function insertNewRecord(data) {
   var table = document
-    .getElementById("recipeList")
-    .getElementsByTagName("thead")[0];
+    .getElementById("storeList")
+    .getElementsByTagName("tbody")[0];
   var newRow = table.insertRow(table.length);
-  cell1 = newRow.insertCell(0);
-  cell1.innerHTML = data.id;
-  cell2 = newRow.insertCell(1);
+  var cell1 = newRow.insertCell(0);
+  // const random = Math.floor(Math.random() * 100);
+
+  cell1.innerHTML = m;
+  m++;
+  var cell2 = newRow.insertCell(1);
   cell2.innerHTML = data.name;
-  cell3 = newRow.insertCell(2);
+  var cell3 = newRow.insertCell(2);
   cell3.innerHTML = data.type;
-  cell4 = newRow.insertCell(3);
+  var cell4 = newRow.insertCell(3);
   cell4.innerHTML = data.description;
-  cell5 = newRow.insertCell(4);
-  cell5.innerHTML = `<button onClick='onEdit(this)'>Edit</button>
-  <button onClick='onDelete(this)'>Delete</button>`;
+  var cell5 = newRow.insertCell(4);
+  cell5.innerHTML = `<button onClick='onEdit(this)' class="btn btn-success ps-3 pe-3 pt-1 pb-1 m-2" style="box-shadow: 2px 2px 2px #fffdfd">Edit</Button> <button onClick='onDelete(this)' class="btn btn-danger ps-3 pe-3 pt-1 pb-1 m-2" style="box-shadow: 2px 2px 2px #fffdfd;">Delete</button>`;
+}
+
+function onEdit(edit) {
+  seletedRow = edit.parentElement.parentElement;
+  // document.getElementById("recipeNo").value = seletedRow.cells[0].innerHTML;
+  document.getElementById("name").value = seletedRow.cells[1].innerHTML;
+  document.getElementById("type").value = seletedRow.cells[2].innerHTML;
+  document.getElementById("description").value = seletedRow.cells[3].innerHTML;
+}
+
+function updateRecord(formData) {
+  // seletedRow.cells[0].innerHTML = formData.recipeNo;
+  seletedRow.cells[1].innerHTML = formData.name;
+  seletedRow.cells[2].innerHTML = formData.type;
+  seletedRow.cells[3].innerHTML = formData.description;
+  seletedRow = null;
+}
+
+function onDelete(deleteData) {
+  if (confirm("Do you want to delete this record?")) {
+    row = deleteData.parentElement.parentElement;
+    document.getElementById("storeList").deleteRow(row.rowIndex);
+  }
+  resetForm();
 }
 
 function resetForm() {
-  document.querySelector("#id").value = "";
-  document.querySelector("#name").value = "";
-  document.querySelector("#type").value = "";
-  document.querySelector("#description").value = "";
-}
-
-function onEdit(td) {
-  row = td.parentElement.parentElement;
-  document.querySelector("#id").value = row.cells[0].innerHTML;
-  document.querySelector("#type").value = row.cells[1].innerHTML;
-  document.querySelector("#name").value = row.cells[2].innerHTML;
-  document.querySelector("#description").value = row.cells[3].innerHTML;
-}
-
-function update(formData) {
-  row.cells[0].innerHTML = formData.id;
-  row.cells[1].innerHTML = formData.name;
-  row.cells[2].innerHTML = formData.type;
-  row.cells[3].innerHTML = formData.description;
-}
-
-function onDelete(td) {
-  console.log(td);
-  row = td.parentElement.parentElement;
-  document.querySelector("#recipeList").deleteRow(row.rowIndex);
+  // document.getElementById("recipeNo").value = "";
+  document.getElementById("name").value = "";
+  document.getElementById("type").value = "";
+  document.getElementById("description").value = "";
 }

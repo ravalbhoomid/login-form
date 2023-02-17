@@ -1,58 +1,101 @@
 body {
-  background-image: url(recipe.jpg);
-  background-repeat: no-repeat;
+  background-image: url("recipe.jpg");
   background-size: cover;
-  backdrop-filter: 2px;
-  height: auto;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
-body h1 {
-  text-align: center;
-  font-size: 60px;
-  margin-top: 30px;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
-form {
-  background-color: rgb(93, 159, 0);
-  height: 450px;
-  width: 350px;
-  margin-top: 20%;
+nav {
+  height: 60px;
+}
+
+.heading {
+  color: black;
+  font-weight: bolder;
+  margin-left: 80px;
+  font-size: 50px;
+}
+
+.formBox {
+  margin-left: 34%;
+  margin-top: 3%;
+  /* box-shadow: rgb(245, 240, 240) 0px 5px 15px; */
+  margin-right: 33.5%;
   padding: 30px;
-  display: grid;
+  background: rgb(3, 105, 105);
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  width: 100px;
+  margin-right: 297px;
+  box-shadow: 2px 2px 2px #fffdfd;
+}
+
+input[type="reset"] {
+  cursor: pointer;
+  width: 100px;
+  box-shadow: 2px 2px 2px #fffdfd;
+}
+
+input {
+  width: 500px;
+  height: 35px;
+  padding-left: 6px;
+  border: 1px solid rgb(190, 187, 187);
+  border-radius: 5px;
+}
+
+input[type="text,number"] {
+  background-color: whitesmoke;
+}
+
+label {
+  font-weight: bolder;
+  color: white;
+}
+
+.listBox {
+  margin-left: 15%;
+  margin-right: 250px;
+  margin-top: 50px;
+  /* box-shadow: rgb(242, 237, 237) 0px 3px 6px; */
+  color: white;
+  font-weight: bold;
 }
 
 table {
-  display: flex;
-  justify-content: center;
-}
-
-table.list {
-  border-collapse: collapse;
-
-  padding: 11px;
-}
-
-table.list th {
-  width: 250px;
-}
-
-.list td {
-  width: 250px;
+  border-collapse: separate;
+  border-spacing: 0 15px;
   text-align: center;
-  padding: 11px;
-  background: whitesmoke;
 }
+
 th {
-  background-color: red;
+  background-color: darkcyan;
   color: white;
   font-size: 18px;
   padding: 5px;
   width: 250px;
 }
-::placeholder {
-  padding-left: 7px;
+
+td {
+  width: 250px;
+  text-align: center;
+  /* border: 1px solid black; */
+  padding: 11px;
+  background: rgba(0, 139, 139, 0.1);
 }
 
-tr.heading {
-  text-align: center;
+::-webkit-input-placeholder {
+  font-size: 15px;
+  color: rgb(166, 164, 164);
+  /* text-indent: 5px; */
 }
